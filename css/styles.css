@@ -1,0 +1,248 @@
+@font-face {
+    font-family: Futura-PT;
+    src: 
+        url(../static/font/futura-pt-medium.ttf);        
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Futura-PT, Arial, Helvetica, sans-serif;
+}
+
+body {
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 10px; 
+}
+
+#header .container{
+    display: flex;
+    flex-wrap: wrap;
+    color: #A89365;
+    text-transform: uppercase;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;    
+}
+
+#header .container a {
+    display: block;
+    text-decoration: none;
+    color: #A89365; 
+    margin-top: 10px;            
+}
+
+#header .container a:hover {
+    color: #726444;
+    stroke: #726444;
+}
+
+
+main {
+    margin: 20px 0;
+}
+
+#slider-wrapp {
+    position: relative;
+    max-width: 100%;
+}
+
+.slider-wrapp__item h2 {
+    color: #A89365;
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.slider-wrapp__item p {
+    color: #575757;
+    font-size: 16px;
+}
+
+.dots-wrapp {
+    display: flex;
+    justify-content: space-between;
+}
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #A89365;
+}
+
+.arrow  {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 33%;
+    user-select: none;
+}
+
+svg:hover path {
+    stroke: #726444;
+}
+
+.prev {
+    left: -24px;
+}
+.next {
+    right: 16px;
+}
+
+.slider-wrapp__item {
+    display: none;
+    width: 100%;
+}
+.slider-wrapp__item img {
+    width: 599px;
+    max-width: 100%;
+}
+
+#button-wrapp {
+    text-align: center;
+}
+
+#button-wrapp button {
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.button-wrapp__specialist {
+    color: #A89365;
+    background: none;
+    border: 1px solid #A89365;
+}
+.button-wrapp__desing {
+    color: white;
+    background-color: #A89365;
+    border: none;
+}
+.button-wrapp__desing:hover {
+    background-color: #726444;
+}
+.button-wrapp__specialist:hover {
+    color: #726444;
+    border-color: #726444;
+}
+
+
+
+
+
+@media screen and (min-width: 600px) {
+    .container {
+        margin: 0 20px; 
+    }
+    h1 {
+        font-size: 32px;
+        font-weight: 800;
+    }
+    #header .container a {
+       margin-top: 9px;            
+    }
+    #slider-wrapp {
+        display: flex;
+    }
+    .slider-wrapp__item {
+        flex: 50%;
+    }
+    .slider-wrapp__item:nth-child(2n) {
+        margin-right: 20px;
+    }
+    .dot_10 {
+        display: none;
+    }
+    .dots-wrapp {
+        justify-content: center;
+    }
+    .dot:not(:nth-child(9)) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        margin: 0 40px; 
+    }  
+    #button-wrapp button {
+        width: 300px;
+    }
+    .button-wrapp__specialist {
+        margin-right: 40px;
+    } 
+    main {
+        margin: 40px 0;
+    }
+    .slider-wrapp__item h2 {
+        margin: 20px 0;
+    }
+    .arrow {
+        display: block;
+        z-index: 999;
+    }
+    .dots-wrapp {
+        display: none;
+    }
+    .slider-wrapp__item:nth-child(2n) {
+        margin-right: 40px;
+    }
+    .slider-wrapp__item {
+        margin-right: 40px;
+    }
+    .main-container {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        margin: 0 80px; 
+    }
+    h1 {
+        font-size: 48px;
+    }
+    #button-wrapp button {
+        width: 360px;
+    }
+    #header .container a {
+        margin-top: 25px;            
+    } 
+    .slider-wrapp__item h2 {
+        font-size: 32px;
+    }
+    .slider-wrapp__item p {
+        font-size: 20px;
+    }
+    .next {
+        right: -8px;
+    }
+    .prev {
+        left: -48px;
+    }
+    .arrow svg {
+        width: 16px;
+        height: 32px;
+    }
+    .main-container {
+        margin-right: 40px;
+    }
+
+    
+}
+
