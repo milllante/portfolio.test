@@ -86,7 +86,7 @@ main {
     display: none;
     cursor: pointer;
     position: absolute;
-    top: 33%;
+    top: 14vw;
     user-select: none;
 }
 
@@ -238,6 +238,9 @@ svg:hover path {
     .arrow svg {
         width: 16px;
         height: 32px;
+    }
+    .arrow  {
+        top: 254px;
     }
     .main-container {
         margin-right: 40px;
